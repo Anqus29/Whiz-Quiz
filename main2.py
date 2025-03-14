@@ -1,10 +1,26 @@
 import random
-from quiz_data import quiz_questions
+import csv
 
 def retrieve_questions(topic):
-    filtered_questions = [question for question in quiz_questions if question["Category"] == topic]
-    random.shuffle(filtered_questions)
-    return filtered_questions
+    questions_by_category = {}
+    # Load questions from CSV file
+    with open("questions.csv") as file:
+        reader = csv.DictReader(file)
+        for row in file:
+            category = row["Category"]
+            question = row["Question"]
+            answer = row["Answer"]
+            options = [row["Option1"], row["Option2"], row["Option3"], answer]
+            random.shuffle(options)
+
+            if category not in questions_by_category:
+                questions_by_category[category] = []
+
+            questions_by_category[category].append({
+                "question": question,
+                "answer": correct_answer,
+                "options": options
+            })
 
 def chosen_topic(categories):
     print("Please choose a topic:")
@@ -17,17 +33,19 @@ def chosen_topic(categories):
         print("Invalid choice. Please try again.")
         return chosen_topic(categories)
 
+
 def intro():
     print("Welcome to Angus's Quiz")
 
 def main():
-    score = 0
-    categories = ["Science", "History", "Star Wars"]
-    intro()
-    topic = chosen_topic(categories)
-    filtered_questions = retrieve_questions(topic)
-    # ...existing code...
+    try:
+        intro()
+        topic = chosen_topic(categories)
+        filtered_questions = retrieve_questions(topic)
 
+    except Exception as error_location:
+        print(f"An error occurred: {error_location}")
+        main()
 main()
 
 
