@@ -4,7 +4,7 @@ import random
 def load_questions_from_csv(questions):
     # Load questions from a CSV file and return them in a dictionary format.
     questions_by_category = {}
-    
+    categories = {}
     with open(questions) as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
@@ -16,7 +16,8 @@ def load_questions_from_csv(questions):
             # Add the question to the dictionary with answers and options
             if category not in questions_by_category:
                 questions_by_category[category] = []
-            # Add the question to the list of questions for the category
+                categories[category] = []
+            # add the question to the list of questions for the category
             questions_by_category[category].append({
                 "question": question,
                 "answer": answer,

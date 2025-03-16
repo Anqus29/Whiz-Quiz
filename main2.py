@@ -1,7 +1,6 @@
 import random
 import csv
 file_path = "questions.csv"
-
 def intro():
     print("Welcome to Angus's Quiz")
 
@@ -28,9 +27,15 @@ def retrieve_questions(file_path):
             })
     return questions_by_category
 
+def display_categories(catagories):
+    print("Topics available:")
+    for i, category in enumerate(catagories.keys()):
+        print(f"{i}. {category}")
+
 
 def main():
     intro()
     questions_by_category = retrieve_questions("questions.csv")
-    print(questions_by_category)
+    display_categories(questions_by_category)
+    
 main()
