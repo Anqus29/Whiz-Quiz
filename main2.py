@@ -75,12 +75,27 @@ def run_quiz(questions_by_category, chosen_topic):
             print(f"Sorry, the correct answer is {options[correct_option - 1]}\n")
             #if the user is wrong
         print(f"Correct answers: {correct_answers}/{individual_questions}\n")
-        #prints the total score
+        #prints the current total score
+    print(f"\nYou got {correct_answers} out of {individual_questions} questions correct.")
+    #prints the final score
+
+def loop():
+    while True:
+        play_again = input("Would you like to play again? (Y/N): ").lower()
+        if play_again == "y":
+            main()
+        elif play_again == "n":
+            print("Thank you for playing!")
+            break
+        else:
+            print("Invalid choice. Please enter 'Y' or 'N'.")
+            #asks the user if they want to play again
 
 def main():
     intro()
     questions_by_category = retrieve_questions("questions.csv")
     chosen_topic = display_categories(questions_by_category)
     run_quiz(questions_by_category, chosen_topic)
+    loop()
 
 main()
