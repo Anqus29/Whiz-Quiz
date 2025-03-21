@@ -1,13 +1,27 @@
 Category,Question,Options,Answer
-Science,"What is the chemical symbol for water?,"O2,NaCl,H2O,CO2", "3"
-Science,What planet is known as the Red Planet?,"Jupiter,Earth,Venus,Mars", "4"
-Science,What gas do plants absorb from the atmosphere?,"Nitrogen,Oxygen,Carbon Dioxide,Hydrogen", "3"
-History,Who was the first president of the USA?,"George Washington,Abraham Lincoln,Thomas Jefferson,John Adams", "1"
-History,In which year did World War II end?,"1918,1945,1939,1965", "2"
-History,Which ancient civilisation built the pyramids?,"Romans,Greeks,Mayans,Egyptians", "4"
-Geography,What is the capital of Australia?,"Canberra,Sydney,Melbourne,Brisbane", "1"
-Geography,Which continent is the Sahara Desert located on?,"Asia,Africa,South America,Europe", "2"
-Geography,What is the largest ocean on Earth?,"Pacific Ocean,Atlantic Ocean,Indian Ocean,Arctic Ocean", "1"
-Sports,How many players are there in a standard soccer team?,"12,9,10,11", "4"
-Sports,Which country won the 2018 FIFA World Cup?,"Argentina,Brazil,France,Germany", "3"
-Sports,What is the national sport of Japan?,"Baseball,Sumo Wrestling,Karate,Judo", "1"
+Science,What is the chemical symbol for water?,"O2,NaCl,H2O,CO2",3
+Science,What planet is known as the Red Planet?,"Jupiter,Earth,Venus,Mars",4
+Science,What gas do plants absorb from the atmosphere?,"Nitrogen,Oxygen,Carbon Dioxide,Hydrogen",3
+Science,What is the largest organ in the human body?,"Heart,Liver,Skin,Lungs",3
+Science,What is the powerhouse of the cell?,"Nucleus,Mitochondria,Ribosome,Endoplasmic Reticulum",2
+History,Who was the first president of the USA?,"George Washington,Abraham Lincoln,Thomas Jefferson,John Adams",1
+History,In which year did World War II end?,"1918,1945,1939,1965",2
+History,Which ancient civilisation built the pyramids?,"Romans,Greeks,Mayans,Egyptians",4
+History,Who won the Battle of Hastings in 1066?,"William the Conqueror,Harold Godwinson,Edward the Confessor,Harald Hardrada",1
+History,Who discovered America?,"Christopher Columbus,Ferdinand Magellan,Leif Erikson,Vasco da Gama",1
+Geography,What is the capital of Australia?,"Canberra,Sydney,Melbourne,Brisbane",1
+Geography,Which continent is the Sahara Desert located on?,"Asia,Africa,South America,Europe",2
+Geography,What is the largest ocean on Earth?,"Pacific Ocean,Atlantic Ocean,Indian Ocean,Arctic Ocean",1
+Geography,What is the smallest country in the world?,"Monaco,Vatican City,San Marino,Liechtenstein",2
+Geography,What is the longest river in the world?,"Nile River,Amazon River,Yangtze River,Mississippi River",1
+Sports,How many players are there in a standard soccer team?,"12,9,10,11",4
+Sports,Which country won the 2018 FIFA World Cup?,"Argentina,Brazil,France,Germany",3
+Sports,What is the national sport of Japan?,"Baseball,Sumo Wrestling,Karate,Judo",1
+Sports,Which country has won the most Olympic medals?,"USA,China,Russia,Germany",1
+Sports,What is the highest score possible in a game of ten-pin bowling?,"200,300,400,500",2
+Random,What is different about the 4th Crusade?, "It was the only successful crusade,It was the only crusade to be led by a king,It was the only crusade to be led by a pope,It was the only crusade to sack Constantinople",4
+Random,What is Karl Marx's great-great-grandson's Youtube channel called?,"Hall Marx,Water Marx,Exclamation Marx,Marx and Spencer",3
+Random,What was the name of the world tree in Norse mythology that connected all realms?,"Yggdrasil,Treebeard,The Giving Tree,The Whomping Willow",1
+Random,What is the name of the first cloned sheep?,"Dolly,Fluffy,Spot,Whiskers",1
+Random,Which invention was referred to as “the eye of the future” in the Netherlands?,"The telescope,The microscope,The compass,The clock",2
+Random,What is the name of the first computer virus?,"Creeper,Brain,Elk Cloner,Stoned",1

@@ -11,16 +11,16 @@ def intro():
 
 def retrieve_questions(file_path):
     questions_by_category = {}
-    # load questions from CSV file
-    with open("questions.csv", newline='', encoding='utf-8') as file:
+    # loads questions from CSV file
+    with open(file_path, newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file)
 
         for row in reader:
             category = row["Category"]
             question = row["Question"]
-            answer_index = int(row["Answer"]) - 1  # Convert answer to zero-based index
-            options = row["Options"].split(",")
-            #adds the data into indivial variables
+            options = [option.strip() for option in row["Options"].split(",")]
+            answer_index = int(row["Answer"]) - 1  # convert answer to zero-based index
+            #adds the data into individual variables
             if category not in questions_by_category:
                 questions_by_category[category] = []
                 #creates a list of each question type for each category
@@ -32,70 +32,82 @@ def retrieve_questions(file_path):
             })
     return questions_by_category
 
-def display_categories(catagories):
+def display_categories(categories):
     print("What topic would you like to choose?\nTopics available:")
-    for i, category in enumerate(catagories.keys(), 1):
+    for i, category in enumerate(categories.keys(), 1):
         print(f"{i}. {category}")
-        #print avalable topics
-    
-    chosen_topic = int(input("\nEnter the number of the topic: "))
-    #accepts an input from the user 
-    while chosen_topic < 1 or chosen_topic > len(catagories):
-        print("Invalid choice. Please select a valid number.")
-        chosen_topic = int(input("What topic would you like to choose?\nEnter the number of the topic: "))
-        #asks for a valid input if the input is wrong
-    return list(catagories.keys())[chosen_topic-1]
+        #print avaliable topics
+    while True:
+        try:
+            chosen_topic = int(input("\nEnter the number of the topic: "))
+            #accepts an input from the user 
+            if 1 <= chosen_topic <= len(categories):
+                return list(categories.keys())[chosen_topic-1]
+            else:
+                print("Invalid choice. Please select a valid number.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+            #asks for a valid input if the input is wrong
 
 def run_quiz(questions_by_category, chosen_topic):
     correct_answers = 0
     print(f"\nStarting quiz in category: {chosen_topic}\n")
+
+    #shuffles questions
     questions = questions_by_category[chosen_topic]
-    random.shuffle(questions)
-    #shuffles the questions
-    for individual_questions, question in enumerate(questions, 1):
-        print(f"{question['question']}\n")
-        #prints the question
+    random.shuffle(questions) 
+
+    #loops for each question
+    for question_number, question in enumerate(questions, 1):
+        print(f"Question {question_number}: {question['question']}")
         options = question["options"]
+        correct_answer = question["options"][question["answer_index"]] # Get the correct answer
         random.shuffle(options)  # Shuffle options
-        correct_option = options.index(question["options"][question["answer_index"]]) + 1  # Adjust correct answer index
-        for individual_options, option in enumerate(options, 1):
-            print(f"{individual_options}. {option}\n")
-            #prints the options
-        user_answer = int(input("Enter the number of your answer: "))
+        correct_option = question["answer_index"] + 1
+        
+        for i, option in enumerate(options, 1):
+            print(f"{i}. {option}")
+        # Get user input for the answer
+        while True:
+            try:
+                user_answer = int(input("Enter the number of your answer: "))
+                if 1 <= user_answer <= len(options):
+                    break
+                else:
+                    print("Invalid choice. Please select a valid number.")
+            except ValueError:
+                print("Invalid input. Please enter a number.")
         #accepts the user input
-        while user_answer < 1 or user_answer > len(options):
-            print("Invalid choice. Please select a valid number.")
-            user_answer = int(input("Enter the number of your answer: "))
-            #loops and asks for a valid input if the input is wrong
-        if user_answer == correct_option:
+        if options[user_answer - 1] == correct_answer:
             correct_answers += 1
             print("Correct!\n")
             #if the user is correct
         else:
-            print(f"Sorry, the correct answer is {options[correct_option - 1]}\n")
+            print(f"Sorry, the correct answer is {correct_answer}\n")
             #if the user is wrong
-        print(f"Correct answers: {correct_answers}/{individual_questions}\n")
+        print(f"Correct answers: {correct_answers}/{question_number}\n")
         #prints the current total score
-    print(f"\nYou got {correct_answers} out of {individual_questions} questions correct.")
+    print(f"\nYou got {correct_answers} out of {question_number} questions correct.")
     #prints the final score
 
-def loop():
-    while True:
-        play_again = input("Would you like to play again? (Y/N): ").lower()
-        if play_again == "y":
-            main()
-        elif play_again == "n":
-            print("Thank you for playing!")
-            break
-        else:
-            print("Invalid choice. Please enter 'Y' or 'N'.")
-            #asks the user if they want to play again
 
 def main():
-    intro()
-    questions_by_category = retrieve_questions("questions.csv")
-    chosen_topic = display_categories(questions_by_category)
-    run_quiz(questions_by_category, chosen_topic)
-    loop()
+    while True:
+        intro()
+        questions_by_category = retrieve_questions(file_path)
+        chosen_topic = display_categories(questions_by_category)
+        run_quiz(questions_by_category, chosen_topic)
+
+        # Ask the user if they want to play again
+        while True:
+            play_again = input("Would you like to play again? (Y/N): ").lower()
+            if play_again == "y":
+                break # restarts the game
+            elif play_again == "n":
+                print("Thank you for playing!")
+                os.system('cls' if os.name == 'nt' else 'clear')
+                return # exits the game
+            else:
+                print("Invalid choice. Please enter 'Y' or 'N'.")
 
 main()
