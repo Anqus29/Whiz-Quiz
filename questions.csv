@@ -1,27 +1,52 @@
-Category,Question,Options,Answer
-Science,What is the chemical symbol for water?,"O2,NaCl,H2O,CO2",3
-Science,What planet is known as the Red Planet?,"Jupiter,Earth,Venus,Mars",4
-Science,What gas do plants absorb from the atmosphere?,"Nitrogen,Oxygen,Carbon Dioxide,Hydrogen",3
-Science,What is the largest organ in the human body?,"Heart,Liver,Skin,Lungs",3
-Science,What is the powerhouse of the cell?,"Nucleus,Mitochondria,Ribosome,Endoplasmic Reticulum",2
-History,Who was the first president of the USA?,"George Washington,Abraham Lincoln,Thomas Jefferson,John Adams",1
-History,In which year did World War II end?,"1918,1945,1939,1965",2
-History,Which ancient civilisation built the pyramids?,"Romans,Greeks,Mayans,Egyptians",4
-History,Who won the Battle of Hastings in 1066?,"William the Conqueror,Harold Godwinson,Edward the Confessor,Harald Hardrada",1
-History,Who discovered America?,"Christopher Columbus,Ferdinand Magellan,Leif Erikson,Vasco da Gama",1
-Geography,What is the capital of Australia?,"Canberra,Sydney,Melbourne,Brisbane",1
-Geography,Which continent is the Sahara Desert located on?,"Asia,Africa,South America,Europe",2
-Geography,What is the largest ocean on Earth?,"Pacific Ocean,Atlantic Ocean,Indian Ocean,Arctic Ocean",1
-Geography,What is the smallest country in the world?,"Monaco,Vatican City,San Marino,Liechtenstein",2
-Geography,What is the longest river in the world?,"Nile River,Amazon River,Yangtze River,Mississippi River",1
-Sports,How many players are there in a standard soccer team?,"12,9,10,11",4
-Sports,Which country won the 2018 FIFA World Cup?,"Argentina,Brazil,France,Germany",3
-Sports,What is the national sport of Japan?,"Baseball,Sumo Wrestling,Karate,Judo",1
-Sports,Which country has won the most Olympic medals?,"USA,China,Russia,Germany",1
-Sports,What is the highest score possible in a game of ten-pin bowling?,"200,300,400,500",2
-Random,What is different about the 4th Crusade?, "It was the only successful crusade,It was the only crusade to be led by a king,It was the only crusade to be led by a pope,It was the only crusade to sack Constantinople",4
-Random,What is Karl Marx's great-great-grandson's Youtube channel called?,"Hall Marx,Water Marx,Exclamation Marx,Marx and Spencer",3
-Random,What was the name of the world tree in Norse mythology that connected all realms?,"Yggdrasil,Treebeard,The Giving Tree,The Whomping Willow",1
-Random,What is the name of the first cloned sheep?,"Dolly,Fluffy,Spot,Whiskers",1
-Random,Which invention was referred to as “the eye of the future” in the Netherlands?,"The telescope,The microscope,The compass,The clock",2
-Random,What is the name of the first computer virus?,"Creeper,Brain,Elk Cloner,Stoned",1
+Category,Question,Options,Answer,Hint
+Science,What is the chemical symbol for water?,"O2,NaCl,H2O,CO2",3,It's the same as the title of a famous book by David Foster Wallace
+Science,What planet is known as the Red Planet?,"Jupiter,Earth,Venus,Mars",4,It's named after the Roman god of war
+Science,What gas do plants absorb from the atmosphere?,"Nitrogen,Oxygen,Carbon Dioxide,Hydrogen",3,It's what humans exhale
+Science,What is the largest organ in the human body?,"Heart,Liver,Skin,Lungs",3,It's the body's first line of defense
+Science,What is the powerhouse of the cell?,"Nucleus,Mitochondria,Ribosome,Endoplasmic Reticulum",2,It's where cellular respiration occurs
+Science,What is the hardest natural substance on Earth?,"Gold,Diamond,Platinum,Silver",2,It's made of carbon
+Science,What is the chemical symbol for gold?,"Au,Ag,Fe,Pb",1,It's derived from the Latin word for gold
+Science,What is the largest mammal in the world?,"Elephant,Blue Whale,Giraffe,Hippopotamus",2,It's also the largest animal on Earth
+Science,What is the smallest bone in the human body?,"Stapes,Patella,Femur,Humerus",1,It's located in the ear
+Science,What is the rarest blood type?,"A,B,AB,O",4,It's also known as the universal donor
+History,Who was the first president of the USA?,"George Washington,Abraham Lincoln,Thomas Jefferson,John Adams",1,He's on the $1 bill
+History,In which year did World War II end?,"1918,1945,1939,1965",2,It ended with the unconditional surrender of the Axis powers
+History,Which ancient civilisation built the pyramids?,"Romans,Greeks,Mayans,Egyptians",4,They were built as tombs for pharaohs
+History,Who won the Battle of Hastings in 1066?,"William the Conqueror,Harold Godwinson,Edward the Confessor,Harald Hardrada",1,It led to the Norman conquest of England
+History,Who discovered America?,"Christopher Columbus,Ferdinand Magellan,Leif Erikson,Vasco da Gama",1,He was an Italian explorer
+History,When did the Roman Empire fall?,"476 AD,1453 AD,1066 AD,1918 AD",1,It was the end of the Western Roman Empire
+History,When did the last claiment to the Roman Empire die?,"476 AD,1453 AD,1806 AD,2011 AD",4,He was from the House of Habsburg
+History,Who was known as the "Iron Lady"?,"Margaret Thatcher,Angela Merkel,Indira Gandhi,Golda Meir",1,She was the Prime Minister of the United Kingdom
+History,Who was the first emperor of Rome?,"Julius Caesar,Augustus,Nero,Caligula",2,He was the adopted son of Julius Caesar
+History,What year did the Berlin Wall fall?,"1989,1991,1987,1993",1,It marked the end of the Cold War
+History,How many wars did Napoleon Bonaparte start?,"0,2,6,4",1, Think about how his wars were started
+Geography,What is the capital of Australia?,"Canberra,Sydney,Melbourne,Brisbane",1,It's located between Sydney and Melbourne
+Geography,Which continent is the Sahara Desert located on?,"Asia,Africa,South America,Europe",2,It's the largest hot desert in the world
+Geography,What is the largest ocean on Earth?,"Pacific Ocean,Atlantic Ocean,Indian Ocean,Arctic Ocean",1,It's also the deepest ocean
+Geography,What is the smallest country in the world?,"Monaco,Vatican City,San Marino,Liechtenstein",2,It's the spiritual and administrative headquarters of the Roman Catholic Church
+Geography,What is the longest river in the world?,"Nile River,Amazon River,Yangtze River,Mississippi River",1,It flows through Egypt
+Geography,What is the tallest mountain in the world?,"Mount Everest,K2,Mauna Kea,Lhotse",3,It's located in near the equator
+Geography,What is the largest country in the world?,"Canada,China,Russia,USA",3,It spans 11 time zones
+Geography,What is the capital of France?,"Berlin,London,Madrid,Paris",4,It's known as the city of love
+Geography,What is the hottest continent on Earth?,"Africa,Antarctica,Asia,Australia",1,It's home to the Sahara Desert
+Geography,What is the largest island in the world?,"Greenland,Madagascar,Borneo,New Guinea",1,It's an autonomous territory of Denmark
+Sports,How many players are there in a standard soccer team?,"12,9,10,11",4,It's the same as the number of players in cricket
+Sports,Which country won the 2018 FIFA World Cup?,"Argentina,Brazil,France,Germany",3,It was their second World Cup win
+Sports,What is the national sport of Japan?,"Baseball,Sumo Wrestling,Karate,Judo",1,It was introduced to Japan in the 19th century
+Sports,Which country has won the most Olympic medals?,"USA,China,Russia,Germany",1,They have won over 2500 medals
+Sports,What is the highest score possible in a game of ten-pin bowling?,"200,300,400,500",2,It's also known as a perfect game
+Sports,Who is the highest paid athlete in the world?,"Lionel Messi,LeBron James,Cristiano Ronaldo,Roger Federer",3,He's a Portuguese footballer
+Sports,How many Grand Slam titles has Serena Williams won?,"20,23,25,30",2,She's won 7 Wimbledon titles
+Sports,When was the first modern Olympic Games held?,"1896,1900,1904,1908",1,It was held in Athens
+Sports,What is the national sport of Canada?,"Ice Hockey,Lacrosse,Curling,Baseball",2,It's also the oldest sport in North America
+Sports,How many players are there in a standard baseball team?,"8,9,10,11",2,It's the same as the number of players in cricket
+Random,What is Karl Marx's great-great-grandson's Youtube channel called?,"Hall Marx,Water Marx,Exclamation Marx,Marx and Spencer",3,It's a play on his last name
+Random,What was the name of the world tree in Norse mythology that connected all realms?,"Yggdrasil,Treebeard,The Giving Tree,The Whomping Willow",1,It's an ash tree
+Random,What is the name of the first cloned sheep?,"Dolly,Fluffy,Spot,Whiskers",1,She was cloned in 1996
+Random,Which invention was referred to as “the eye of the future” in the Netherlands?,"The telescope,The microscope,The compass,The clock",2,It allowed people to see things that were previously invisible
+Random,What is the name of the first computer virus?,"Stoned,Brain,Elk Cloner,Creeper",4,It shares its name with a creature from the owrlds most popular game
+Random,What is different about the 4th Crusade?,"It was the only successful crusade,It was the only crusade to be led by a king,It was the only crusade to be led by a pope,It was the only crusade to sack Constantinople",4,It was involved an attack on a Christian city
+Random,What is the name of the first computer mouse?,"The Pointer,The Clicker,The Mouser,The Trackball",4,It was invented by Douglas Engelbart
+Random,What is the name of the first computer?,"ENIAC,UNIVAC,EDVAC,CSIRAC",1,It was developed in the 1940s
+Random,What is the name of the first computer programmer?,"Ada Lovelace,Grace Hopper,Alan Turing,Charles Babbage",1,She was the daughter of Lord Byron
+Random,What is the name of the first computer bug?,"Ant,Beetle,Fly,Moth",4,It was found in the Harvard Mark II computer

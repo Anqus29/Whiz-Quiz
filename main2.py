@@ -14,12 +14,12 @@ def retrieve_questions(file_path):
     # loads questions from CSV file
     with open(file_path, newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file)
-
         for row in reader:
             category = row["Category"]
             question = row["Question"]
             options = [option.strip() for option in row["Options"].split(",")]
-            answer_index = int(row["Answer"]) - 1  # convert answer to zero-based index
+            answer_index = int(row["Answer"]) - 1 
+            hint = row["Hint"]
             #adds the data into individual variables
             if category not in questions_by_category:
                 questions_by_category[category] = []
@@ -27,7 +27,9 @@ def retrieve_questions(file_path):
             questions_by_category[category].append({
                 "question": question,
                 "answer_index": answer_index,  # Store the correct answer index
-                "options": options
+                "options": options,
+
+                "hints": hint
             #combines the question, answer and options into a dictionary
             })
     return questions_by_category
@@ -61,17 +63,21 @@ def run_quiz(questions_by_category, chosen_topic):
     for question_number, question in enumerate(questions, 1):
         print(f"Question {question_number}: {question['question']}")
         options = question["options"]
-        correct_answer = question["options"][question["answer_index"]] # Get the correct answer
+        correct_answer = options[question["answer_index"]] # Get the correct answer
         random.shuffle(options)  # Shuffle options
-        correct_option = question["answer_index"] + 1
         
         for i, option in enumerate(options, 1):
             print(f"{i}. {option}")
         # Get user input for the answer
         while True:
             try:
-                user_answer = int(input("Enter the number of your answer: "))
-                if 1 <= user_answer <= len(options):
+                user_answer = input("Enter the number of your answer or '0' for a hint: ").lower()
+                #accepts the user input
+                if user_answer == "0":
+                    print(f"Hint: {question['hints']}")
+                    #if the user asks for a hint
+                
+                elif 1 <= int(user_answer) <= len(options):
                     break
                 else:
                     print("Invalid choice. Please select a valid number.")
@@ -89,7 +95,6 @@ def run_quiz(questions_by_category, chosen_topic):
         #prints the current total score
     print(f"\nYou got {correct_answers} out of {question_number} questions correct.")
     #prints the final score
-
 
 def main():
     while True:
