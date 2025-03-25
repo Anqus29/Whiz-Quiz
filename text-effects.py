@@ -1,0 +1,1 @@
+from terminaltexteffects.effects.effect_slide import Slide
