@@ -13,8 +13,8 @@ History,Who was the first president of the USA?,"George Washington,Abraham Linco
 History,In which year did World War II end?,"1918,1945,1939,1965",2,It ended with the unconditional surrender of the Axis powers
 History,Which ancient civilisation built the pyramids?,"Romans,Greeks,Mayans,Egyptians",4,They were built as tombs for pharaohs
 History,Who won the Battle of Hastings in 1066?,"William the Conqueror,Harold Godwinson,Edward the Confessor,Harald Hardrada",1,It led to the Norman conquest of England
-History,Who discovered America?,"Christopher Columbus,Ferdinand Magellan,Leif Erikson,Vasco da Gama",1,He was an Italian explorer
-History,When did the Roman Empire fall?,"476 AD,1453 AD,1066 AD,1918 AD",1,This is the year the empire split in two
+History,Who discovered America?,"Christopher Columbus,Ferdinand Magellan,Leif Erikson,Vasco da Gama",3,He was an Italian explorer
+History,When did the Western Roman Empire fall?,"476 AD,1453 AD,1066 AD,1918 AD",1,This is the year the empire split in two
 History,When did the last claiment to the Roman Empire die?,"476 AD,1453 AD,1806 AD,2011 AD",4,He was from the House of Habsburg
 History,Who was known as the "Iron Lady"?,"Margaret Thatcher,Angela Merkel,Indira Gandhi,Golda Meir",1,She was the Prime Minister of the United Kingdom
 History,Who was the first emperor of Rome?,"Julius Caesar,Augustus,Nero,Caligula",2,He was the adopted son of Julius Caesar
@@ -29,7 +29,7 @@ Geography,What is the tallest mountain in the world?,"Mount Everest,K2,Mauna Kea
 Geography,What is the largest country in the world?,"Canada,China,Russia,USA",3,It spans 11 time zones
 Geography,What is the capital of France?,"Berlin,London,Madrid,Paris",4,It's known as the city of love
 Geography,What is the hottest continent on Earth?,"Africa,Antarctica,Asia,Australia",1,It's home to the Sahara Desert
-Geography,What is the largest island in the world?,"Greenland,Madagascar,Borneo,New Guinea",1,It's an autonomous territory of Denmark
+Geography,What is the largest island in the world?,"Greenland,Madagascar,Australia,New Guinea",1,It's an autonomous territory of Denmark
 Sports,How many players are there in a standard soccer team?,"12,9,10,11",4,It's the same as the number of players in cricket
 Sports,Which country won the 2018 FIFA World Cup?,"Argentina,Brazil,France,Germany",3,It was their second World Cup win
 Sports,What is the national sport of Japan?,"Baseball,Sumo Wrestling,Karate,Judo",1,It was introduced to Japan in the 19th century
@@ -48,7 +48,7 @@ Random,What is different about the 4th Crusade?,"It was the only successful crus
 Random,What is the term for an animal that can switch between male and female during its lifetime?,"Hermaphrodite,Metamorphic,Binary,Reversible",1,It's named after a Greek god
 Random,Which country has the most islands in the world?,"Sweden,Indonesia,Philippines,Japan",2,It has over 267 570 islands
 Random,What is the name of the spaceship in the movie Alien?,"Serenity,Enterprise,Millennium Falcon,Nostromo",4,It's named after a Joseph Conrad novel
-Random,What is the next number in this sequence: 2 6 12 20 30 __?","40,42,44,46",3,It's the sum of the previous two numbers
+Random,What is the next number in this sequence: 2 2 4 6 10 16 __?","24,28,26,46",3,It's the sum of the previous two numbers
 Random,What is the longest English word that can be typed using only the left hand on a standard keyboard?,"Stewardesses,Aftercataracts,Desegregated,Telegraphed",2,It's a medical term
 Computers,What is the name of the first computer mouse?,"The Pointer,The Clicker,The Mouser,The Trackball",4,It was invented by Douglas Engelbart
 Computers,What is the name of the first computer?,"ENIAC,UNIVAC,EDVAC,CSIRAC",1,It was the Electronic Numerical Integrator and Computer
@@ -57,7 +57,7 @@ Computers,What is the name of the first computer bug?,"Ant,Beetle,Fly,Moth",4,It
 Computers,What is the name of the first computer virus?,"Stoned,Brain,Elk Cloner,Creeper",4,It shares its name with a creature from the worlds most popular game
 Computers,How many bits are in a byte?,"4,8,16,32",2,It's also the number of players in a standard baseball team
 Computers,When was the first computer invented?,"1940,1950,1960,1970",1,It was developed during World War II
-Computers,What is the name of the first computer game?,"Space War,Space Invaders,Pong",3,It was developed by Atari
+Computers,What is the name of the first computer game?,"Space War,Space Invaders,Pong,Tennis for Two",3,It was developed by Atari
 Computers,Who is the father of the computer?,"Charles Babbage,Alan Turing,John von Neumann,Ada Lovelace",1,He invented the first mechanical computer
 Computers,How many bytes are in a kilobyte?,"1000,1024,2048,4096",2,It's also the number of bits in a kilobit
 Computers,What is the name of the first computer network?,"ARPANET,NSFNET,CSNET,Internet",1,It was developed by the US Department of Defense

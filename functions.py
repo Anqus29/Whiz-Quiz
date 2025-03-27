@@ -1,13 +1,26 @@
 import random
 import csv
 import os
+from terminaltexteffects.effects.effect_burn import Burn
+from terminaltexteffects.effects.effect_expand import Expand
+from colorama import Fore, init
 
 file_path = "questions.csv"
+init()
+
 
 def intro():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("Welcome to Angus's Quiz\n")
-    #tis an intro but also clears ugly text
+    
+    effect = Burn(" █████╗      ██████╗ ██╗   ██╗██╗███████╗     ██████╗  █████╗ ███╗   ███╗███████╗\n██╔══██╗    ██╔═══██╗██║   ██║██║╚══███╔╝    ██╔════╝ ██╔══██╗████╗ ████║██╔════╝\n███████║    ██║   ██║██║   ██║██║  ███╔╝     ██║  ███╗███████║██╔████╔██║█████╗  \n██╔══██║    ██║▄▄ ██║██║   ██║██║ ███╔╝      ██║   ██║██╔══██║██║╚██╔╝██║██╔══╝  \n██║  ██║    ╚██████╔╝╚██████╔╝██║███████╗    ╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗\n╚═╝  ╚═╝     ╚══▀▀═╝  ╚═════╝ ╚═╝╚══════╝     ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝")
+    with effect.terminal_output() as terminal:
+        for frame in effect:
+            terminal.print(frame)
+
+    effect = Expand("██████╗ ██╗   ██╗     █████╗ ███╗   ██╗ ██████╗ ██╗   ██╗███████╗\n██╔══██╗╚██╗ ██╔╝    ██╔══██╗████╗  ██║██╔════╝ ██║   ██║██╔════╝\n██████╔╝ ╚████╔╝     ███████║██╔██╗ ██║██║  ███╗██║   ██║███████╗\n██╔══██╗  ╚██╔╝      ██╔══██║██║╚██╗██║██║   ██║██║   ██║╚════██║\n██████╔╝   ██║       ██║  ██║██║ ╚████║╚██████╔╝╚██████╔╝███████║\n╚═════╝    ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚═════╝ ╚══════╝\n")                                                                 
+    with effect.terminal_output() as terminal:
+        for frame in effect:
+            terminal.print(frame)
 
 def retrieve_questions(file_path):
     questions_by_category = {}
@@ -28,31 +41,29 @@ def retrieve_questions(file_path):
                 "question": question,
                 "answer_index": answer_index,  # Store the correct answer index
                 "options": options,
-                "hints": hint
+                "hint": hint
             #combines the question, answer and options into a dictionary
             })
     return questions_by_category
 
 def display_categories(categories):
-    print("What topic would you like to choose?\nTopics available:")
+    print(Fore.YELLOW + "What topic would you like to choose?")
+    print(Fore.GREEN + "Topics available:")
     for i, category in enumerate(categories.keys(), 1):
-        print(f"{i}. {category}")
-        #print avaliable topics
+        print(Fore.CYAN + f"{i}. {category}")
     while True:
         try:
-            chosen_topic = int(input("\nEnter the number of the topic: "))
-            #accepts an input from the user 
+            chosen_topic = int(input(Fore.RESET + "\nEnter the number of the topic: "))
             if 1 <= chosen_topic <= len(categories):
-                return list(categories.keys())[chosen_topic-1]
+                return list(categories.keys())[chosen_topic - 1]
             else:
                 print("Invalid choice. Please select a valid number.")
         except ValueError:
             print("Invalid input. Please enter a number.")
-            #asks for a valid input if the input is wrong
 
-def run_quiz(questions_by_category, chosen_topic):
+def run_quiz(questions_by_category, chosen_topic, total_score):
     correct_answers = 0
-    print(f"\nStarting quiz in category: {chosen_topic}\n")
+    print(Fore.YELLOW + f"\nStarting quiz in category: {chosen_topic}\n")
 
     #shuffles questions
     questions = questions_by_category[chosen_topic]
@@ -60,38 +71,39 @@ def run_quiz(questions_by_category, chosen_topic):
 
     #loops for each question
     for question_number, question in enumerate(questions, 1):
-        print(f"Question {question_number}: {question['question']}")
+        print(Fore.MAGENTA + f"Question {question_number}: {question['question']}")
         options = question["options"]
         correct_answer = options[question["answer_index"]] # Get the correct answer
         random.shuffle(options)  # Shuffle options
         
         for i, option in enumerate(options, 1):
-            print(f"{i}. {option}")
+            print(Fore.CYAN + f"{i}. {option}")
         # Get user input for the answer
         while True:
             try:
-                user_answer = int(input("Enter the number of your answer or '0' for a hint: "))
+                user_answer = int(input(Fore.RESET + "Enter the number of your answer or '0' for a hint: "))
                 #accepts the user input
 
                 if user_answer == 0:
-                    print(f"Hint: {question['hints']}\n")
+                    print(Fore.GREEN + f"Hint: {question['hint']}\n")
                     #if the user asks for a hint
-                
                 elif 1 <= user_answer <= len(options):
                     break
                 else:
-                    print("Invalid choice. Please select a valid number.")
+                    print(Fore.RED + "Invalid choice. Please select a valid number.")
             except ValueError:
-                print("Invalid input. Please enter a number.")
-        #accepts the user input
+                print(Fore.RED + "Invalid input. Please enter a number.")
+    
         if options[user_answer - 1] == correct_answer:
             correct_answers += 1
-            print("Correct!\n")
+            print(Fore.GREEN + "Correct!\n")
             #if the user is correct
         else:
-            print(f"Sorry, the correct answer is {correct_answer}\n")
+            print(Fore.RED + f"Sorry, the correct answer is {correct_answer}\n")
             #if the user is wrong
-        print(f"Correct answers: {correct_answers}/{question_number}\n")
+        print(Fore.GREEN +f"Correct answers: {correct_answers}/{question_number}\n")
         #prints the current total score
-    print(f"\nYou got {correct_answers} out of {question_number} questions correct.")
-    #prints the final score
+    print(Fore.GREEN +f"\nYou got {correct_answers} out of {question_number} questions correct.")
+        #prints the final score
+    total_score += correct_answers  # Update the total score
+    return total_score
