@@ -114,7 +114,8 @@ def run_quiz(questions_by_category, chosen_topic, total_score):
         while True:
             elapsed_time = time.time() - start_time
             if elapsed_time > time_limit:
-                typing(Fore.RED + "Time's up!")
+                typing(Fore.RED + "You ran out of Time!")
+                typing(Fore.RED + f"The correct answer was: {correct_answer}")
                 break
             # check if the user runs out of time
 
@@ -153,6 +154,6 @@ def run_quiz(questions_by_category, chosen_topic, total_score):
     
         
         
-    typing(Fore.GREEN +f"\nYou got {correct_answers} out of {question_number} questions correct.") #prints the final score
+    typing(Fore.GREEN +f"\nYou got {correct_answers} out of {question_number} questions correct.\nYou used {hints_used} hints") #prints the final score
     total_score += correct_answers  # Update the total score
     return total_score
