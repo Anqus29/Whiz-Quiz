@@ -162,15 +162,14 @@ def play_again(total_score):
     """
     Prompts the user to play again or exit the game.
     """
-        # Ask the user if they want to play again
     while True:
-        typing("Would you like to play again? (Y/N): ")
-        play_again = input().strip().lower()
-        if play_again == "y":
-            break  # restarts the game 
-        elif play_again == "n":
+        typing(Fore.RESET + "Would you like to play again? (Y/N): ")
+        user_input = input().strip().lower()
+        if user_input == "y":
+            return True  # User wants to play again
+        elif user_input == "n":
             typing(Fore.BLUE + "Thank you for playing!")
             typing(f"Your total score was {total_score}")
-            return  # Exits the game
+            return False  # User wants to exit the game
         else:
-            typing(Fore.RED +"Invalid choice. Please enter 'Y' or 'N'.")
+            typing(Fore.RED + "Invalid choice. Please enter 'Y' or 'N'.")
