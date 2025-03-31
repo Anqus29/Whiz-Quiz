@@ -157,3 +157,20 @@ def run_quiz(questions_by_category, chosen_topic, total_score):
     typing(Fore.GREEN +f"\nYou got {correct_answers} out of {question_number} questions correct.\nYou used {hints_used} hints") #prints the final score
     total_score += correct_answers  # Update the total score
     return total_score
+
+def play_again(total_score):
+    """
+    Prompts the user to play again or exit the game.
+    """
+        # Ask the user if they want to play again
+    while True:
+        typing("Would you like to play again? (Y/N): ")
+        play_again = input().strip().lower()
+        if play_again == "y":
+            break  # restarts the game 
+        elif play_again == "n":
+            typing(Fore.BLUE + "Thank you for playing!")
+            typing(f"Your total score was {total_score}")
+            return  # Exits the game
+        else:
+            typing(Fore.RED +"Invalid choice. Please enter 'Y' or 'N'.")
