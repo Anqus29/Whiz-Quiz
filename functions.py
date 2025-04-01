@@ -35,6 +35,7 @@ def intro():
     with effect.terminal_output() as terminal:
         for frame in effect:
             terminal.print(frame)
+    print("------------------------------------------------------------------------------------------------------------")
 
 def retrieve_questions(file_path):
     """
@@ -154,9 +155,11 @@ def run_quiz(questions_by_category, chosen_topic, total_score):
     
         
         
-    typing(Fore.GREEN +f"\nYou got {correct_answers} out of {question_number} questions correct.\nYou used {hints_used} hints") #prints the final score
+    typing(Fore.GREEN +f"\nYou got {correct_answers} out of {question_number} questions correct.")
+    print("You used {hints_used} hints") #prints the final score
     total_score += correct_answers  # Update the total score
     return total_score
+
 
 def play_again(total_score):
     """

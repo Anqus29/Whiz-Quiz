@@ -4,8 +4,8 @@ from colorama import Fore
 
 def main():
     total_score = 0  # Initialize total score
-    intro()
 
+    intro()
     questions_by_category = retrieve_questions("questions.csv")
 
     while True:
