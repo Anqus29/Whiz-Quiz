@@ -70,8 +70,8 @@ def display_categories(categories):
     """
     typing(Fore.YELLOW + "What topic would you like to choose?")
     typing(Fore.GREEN + "Topics available:")
-    for i, category in enumerate(categories.keys(), 1):
-        typing(Fore.CYAN + f"{i}. {category}")
+    for topic, category in enumerate(categories.keys(), 1):
+        typing(Fore.CYAN + f"{topic}. {category}")
     while True:
         try:
             chosen_topic = int(input(Fore.RESET + "\nEnter the number of the topic: "))
@@ -87,7 +87,7 @@ def run_quiz(questions_by_category, chosen_topic, total_score):
     Runs the quiz for the chosen topic and updates the total score.
     """
     correct_answers = 0
-    time_limit = 15
+    time_limit = 20
     hints_used = 0
 
     typing(Fore.YELLOW + f"\nStarting quiz in category: {chosen_topic}\n")
@@ -133,7 +133,7 @@ def ask_question(question_number, question, time_limit, hints_used):
                 typing(Fore.RED + "\nYou ran out of Time!")
                 typing(Fore.RED + f"The correct answer was: {correct_answer}")
                 return False, hints_used
-            if user_answer.lower() == 'h':
+            if not user_answer.isdigit() and user_answer.lower() == 'h':
                 if hints_used < 3:
                     hints_used += 1
                     typing(Fore.YELLOW + f"Hints remaining: {3 - hints_used}")
