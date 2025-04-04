@@ -2,7 +2,7 @@ from colorama import Fore
 import random
 from typewriter import typing
 from ask_question import ask_question
-
+from high_score_check import high_score_check
 
 
 def run_quiz(questions_by_category, chosen_topic, total_score):
@@ -30,6 +30,8 @@ def run_quiz(questions_by_category, chosen_topic, total_score):
             correct_answers += 1
 
         typing(Fore.GREEN + f"Correct answers so far: {correct_answers}/{question_number}\n")
+
+    high_score_check(correct_answers, chosen_topic)
 
     typing(Fore.GREEN + f"\nYou got {correct_answers} out of {len(questions)} questions correct.")
     typing(Fore.YELLOW + f"You used {hints_used} hint/s.\n")

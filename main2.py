@@ -8,12 +8,12 @@ from colorama import Fore
 
 
 def main():
-    total_score = 0  # Initialize total score
+    total_score = 0  # Initialize total score2
 
     intro()
-    questions_by_category = retrieve_questions("questions.csv")  # Load questions
 
     while True:
+        questions_by_category = retrieve_questions("questions.csv")  # Load questions from CSV file
         chosen_topic = display_categories(questions_by_category)
         total_score = run_quiz(questions_by_category, chosen_topic, total_score)
         # Ask the user if they want to play again

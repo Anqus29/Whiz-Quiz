@@ -8,5 +8,5 @@ def typing(prompt_text):
     for char in prompt_text:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.05)
+        time.sleep(0.04)
     print("")
